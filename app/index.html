@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="blocChat">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Base Project</title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-    <h4>Hello, World???</h4>
+    <ui-view></ui-view>
+    
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+     
+    <!-- AngularUI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    
+    <!-- FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    
+    <!-- Added Firebase to web app -->
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>   
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBjlKSn5LL7Gqq0ReD2B8gtvmQuZ-Sml_c",
+            authDomain: "blocchat-92da1.firebaseapp.com",
+            databaseURL: "https://blocchat-92da1.firebaseio.com",
+            projectId: "blocchat-92da1",
+            storageBucket: "blocchat-92da1.appspot.com",
+            messagingSenderId: "417787966137"
+        };
+        firebase.initializeApp(config);
+        </script>
+
+    <!-- Application Files -->
     <script src="/scripts/app.js"></script>
+    
+    
+    
+    
 </body>
 </html>
