@@ -1,16 +1,19 @@
 <h1>Home Page home.html </h1>
 <h2>This is where the chat rooms should be listed</h2>
 
-<section class="    ">
-    <div class="   " ng-repeat="room in home.Rooms">
-                                    
-                                  
-    <p>
-        
-      {{ room.$value }}
-        
-    </p>
+    <button class="btn btn-primary" type="button" ng-click="openModal()">Add room</button>
+<div class="modal-footer">
     
+</div>
+<section class="    ">
+    <div class="    " ng-repeat="room in home.Rooms"> 
+        
+            <!--  ng-repeat="room in home.Rooms">  -->
+            <p>
+        
+                {{ room.$value }}
+        
+            </p>   
     
     </div>
 
