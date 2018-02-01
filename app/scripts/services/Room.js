@@ -8,9 +8,12 @@
 
     Room.all = rooms;
 
-    Room.add = function(room) {
+    //Room.add = function(room) {
         //Use the firebase method $add here
-    } 
+        // rooms.$add(room).then(function(ref) 
+        // rooms.$add(room)
+    //})
+     
     
     return Room;
   }
