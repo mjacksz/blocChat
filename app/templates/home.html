@@ -4,28 +4,15 @@
  <div class="col-md-6 col-md-offset-3">
     <h1>blocChat-3</h1>
     <p>Enter new chat room</p>
-    <<button type="button" class="btn btn-default" ng-click="home.open()"">Add Room</button>  
+    <button type="button" class="btn btn-default" ng-click="home.open($value)">Add Room</button>  
 </div>
 
-   
-                                                                  
-                                                                    
-                                                              
-                                                                    
-<!--  <section class="    ">  -->
+
     <div class="    " ng-repeat="room in home.Rooms"> 
         <p>
             {{ room.$value }}
         </p>   
     </div>
-
-
-<!--  </section>  -->
-
-
-
-
-
 
 
 

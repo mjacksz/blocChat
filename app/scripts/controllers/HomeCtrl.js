@@ -1,7 +1,7 @@
 (function() {
     function HomeCtrl(Room, $uibModal) {
         this.Rooms = Room.all;
-        console.log("From HomeCtrl" + this.Rooms);
+        console.log("Inside HomeCtrl" + this.Rooms);
         
         this.open = function() {
         $uibModal.open({
