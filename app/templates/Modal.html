@@ -4,7 +4,7 @@
       <div class="modal-body">
         <form ng-submit="ok()">
           <div class="input-group animated fadeIn">
-            <input type="text" class="form-control finderBar" ng-model="searchTerm" placeholder="Please enter a room name" autofocus>
+            <input type="text" class="form-control finderBar" ng-model="modal.searchTerm" placeholder="Please enter a room name" autofocus>
             <span class="input-group-btn">
                 <button class="btn btn-default btn-success" type="button" ng-click="modal.ok()">Create!</button>
             </span>
@@ -13,5 +13,5 @@
        </div>
 
       <div class="modal-footer">
-        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        <button class="btn btn-warning" type="button" ng-click="modal.cancel()">Cancel</button>
       </div>
