@@ -3,7 +3,6 @@
         console.log("Inside ModalCtrl.js " + Room );
         this.Rooms = Room.all;
         
-       
   this.ok = function() {
     console.log("At the this.ok " + this.searchTerm );
     Room.add(this.searchTerm);
