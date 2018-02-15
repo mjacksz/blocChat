@@ -6,14 +6,13 @@
 
     Message.getByRoomId = function(roomId) {
         // Filter the messages by their room ID.
-        // ref.orderByChild("roomID").equalTo(roomID);
-        // console.log("Inside Messages.js - Message.getByRoomID);
-    };
-
+         console.log("Inside Messages.js - Message.getByRoomID");
+         return $firebaseArray(ref.orderByChild("roomID").equalTo(roomId));
+         
+    }
     return Message;
-    };
   }
-
+                     
   angular
     .module('blocChat')
     .factory('Message', ['$firebaseArray', Message]);

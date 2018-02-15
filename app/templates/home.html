@@ -8,7 +8,7 @@
 </div>
 
 
-    <div class="    " ng-repeat="room in home.Rooms"> 
+    <div class="    " ng-click="home.select(room.$id)" ng-repeat="room in home.Rooms"> 
         <p>
             {{ room.$value }}
         </p>   
