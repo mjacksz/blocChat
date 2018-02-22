@@ -10,8 +10,12 @@
 
     <div class="    " ng-click="home.select(room.$id)" ng-repeat="room in home.Rooms"> 
         <p>
-            {{ room.$value }}
-        </p>   
+            <!--  add ng-click script  (HomeCtrl.js) home.open($value) -->
+            <!-- <button type="button" class="btn btn-default ng-click="Message.open"> {{ room.$value }} </button> -->
+            <button type="button" class="btn btn-default" ng-click="">  {{ room.$value }} </button>  
+            <!-- {{ room.$value }}  -->       
+        </p>
+        
     </div>
 
 
