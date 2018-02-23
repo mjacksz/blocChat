@@ -1,7 +1,11 @@
 (function() {
-    console.log("Inside HomeCtrl");
-    //function HomeCtrl(Room, $uibModal, Message) {
-     function HomeCtrl(Room, $uibModal) {
+    console.log("Inside HomeCtrl - Start of HomeCtrl");
+    function HomeCtrl(Room, $uibModal, Message) {
+    //function HomeCtrl(Room, $uibModal) {
+         
+        console.log("Inside HomeCtrl - Room is: " + Room);
+        console.log("Inside HomeCtrl - $uibModal is: " + $uibModal);
+       // console.log("Inside HomeCtrl - Message is: " + Message);
         
         this.Rooms = Room.all;
             
@@ -10,21 +14,22 @@
           templateUrl: '/templates/Modal.html',
           controller: 'ModalCtrl',
           controllerAs: "modal"
-        });
-    };
-       /*
-        this.select = function(roomID) {
-            console.log("roomID: " + roomID);
-            this.Messages = Message.getByRoomId(roomID);
-            console.log(this.Messages);          
+          });
+        };
+         
+       
+        this.select = function(roomId) {
+            console.log("roomID: " + roomId);
+            this.Messages = Message.getByRoomId(roomId);
+            console.log("HomeCtrl " , this.Messages);          
         }
-       */     
+            
             
     }
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ["Room" ,"$uibModal", HomeCtrl]);
-        //.controller('HomeCtrl', ["Room" ,"$uibModal", "Message", HomeCtrl]);
+        //.controller('HomeCtrl', ["Room" ,"$uibModal", HomeCtrl]);
+        .controller('HomeCtrl', ["Room" ,"$uibModal", "Message", HomeCtrl]);
         //.controller('HomeCtrl', ["Room" ,"$uibModal", "Message"]);
 })();
