@@ -4,11 +4,13 @@
       if (!currentUser || currentUser === '') {
         $uibModal.open({
         // Modal configuration object properties
-            templateUrl: '/templates/username.html',
-            controller: 'usernameCtrl',
-            controllerAs: "username"
+            currentUser.put("blocChatCurrentUser");
+            console.log("usernameCtrl - currentUser is: " + currentUser);
+            //templateUrl: '/templates/username.html',
+            //controller: 'usernameCtrl',
+            //controllerAs: "username"
             });
-        $uibModalInstance.close();
+        $uibModal.close();
         // };
         // this.ok = function() {
         // console.log("At the this.ok " + this.searchTerm );
