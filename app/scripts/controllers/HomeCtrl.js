@@ -30,6 +30,6 @@
     angular
         .module('blocChat')
         //.controller('HomeCtrl', ["Room" ,"$uibModal", HomeCtrl]);
-        //.controller('HomeCtrl', ["Room" ,"$uibModal", "Message", "HomeCtrl"]);
-        .controller('HomeCtrl', ["Room" ,"$uibModal", "Message"]);
+        .controller('HomeCtrl', ["Room" ,"$uibModal", "Message", HomeCtrl]);
+        //.controller('HomeCtrl', ["Room" ,"$uibModal", "Message"]);
 })();

@@ -15,6 +15,8 @@
     $uibModalInstance.close();
     // $uibModalInstance.dismiss('cancel');
   };
+        
+   // username 
 }
 
 angular.module('blocChat')
