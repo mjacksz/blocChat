@@ -10,7 +10,8 @@
         this.Rooms = Room.all;
             
         this.open = function() {
-        $uibModal.open({
+          console.log("HomeCtrl.js - Inside this.open function");
+          $uibModal.open({
           templateUrl: '/templates/Modal.html',
           controller: 'ModalCtrl',
           controllerAs: "modal"
