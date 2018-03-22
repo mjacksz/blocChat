@@ -4,16 +4,17 @@
       <div class="modal-body">
         <form ng-submit="ok()">
           <div class="input-group animated fadeIn">
+             
               
-            <input type="text" class="form-control finderBar" ng-model="modal.username" placeholder="Please enter a username" autofocus>            
-            <!--  <input type="text" class="form-control finderBar" ng-model="username.searchTerm" placeholder="Please enter a username" autofocus>  -->
-            <!--  <input type="text" class="form-control finderBar" ng-model="modal.searchTerm" placeholder="Please enter a username" autofocus>  -->
+            <!--   Display / Re-display Modal -->
+            
+            <input type="text" class="form-control finderBar" ng-model="modal.username" placeholder="Please enter a username" autofocus>
            
             <span class="input-group-btn">
                 
                 <button class="btn btn-default btn-success" type="button" ng-click="modal.setUserName()">Create!</button>
-                <!--   <button class="btn btn-default btn-success" type="button" ng-click="username.ok()">Create!</button>  -->
                 
+             <!-- End display of Modal  -->   
                 
             </span>
           </div>

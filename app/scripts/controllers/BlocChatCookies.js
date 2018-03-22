@@ -7,11 +7,10 @@
       console.log("BlocChatCookies.js - value of $cookies is: " + $cookies);
       console.log("BlocChatCookies.js - value of currentUser is: " + currentUser);
       
-      
-      
-      if (!currentUser || currentUser === '') {
-        console.log("BlocChatCookies.js - Inside IF currentUser statement");
-          
+      if (!currentUser || currentUser === '' ) {   // Test #1
+        console.log("BlocChatCookies.js - Inside DO loop/n");
+        
+   
         $uibModal.open({
         // Modal configuration object properties            
             templateUrl: '/templates/username.html',
@@ -19,17 +18,21 @@
             //controller: 'BlocChatCookies',
             //controllerAs: "username"
             controllerAs: "modal"           
-            });
-                  
-          $cookies.put("blocChatCurrentUser", BlocChatCookies.searchTerm);
+            });             
+      
+        //  Add check uibModal 
           
-         // $uibModalInstance.close();
-         
-        
-      } // Line 12
-  } // From line 2
+        //  $uibModalInstance.close();
+        //   then check inputed field what is the field name ??
+        //  if ( !username.setUserName  || username.setUserName === '' || !username.setUserName.trim() )  {
+        //      Do nothing - continue to add to cookie field - input is something 
+        //     } else  { 
+        //      return
+        //  }
+        console.log("BlocChatCookies.js - finish");  
+      }
 
-
+  }
   angular
     .module('blocChat')
     .run(['$cookies', '$uibModal', BlocChatCookies]);
