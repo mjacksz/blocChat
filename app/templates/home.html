@@ -3,17 +3,14 @@
   
 <div class="col-md-6 col-md-offset-3">
     <h1>blocChat-3</h1>
-    <p>Enter new chat room</p>
+    <p>Enter New chat room</p>
     <button type="button" class="btn btn-default" ng-click="home.open($value)">Add Room</button>  
 </div>
 
 
-<div class="    " ng-click="home.select(room.$id)" ng-repeat="room in home.Rooms"> 
+<div class="  " ng-click="home.select(room.$id)" ng-repeat="room in home.Rooms"> 
     <p>
-            <!--  add ng-click script  (HomeCtrl.js) home.open($value) -->
-            <!-- <button type="button" class="btn btn-default ng-click="Message.open()"> {{ room.$value }} </button> -->
-        <button type="button" class="btn btn-default" ng-click="Message.open(room.$value)">  {{ room.$value }} </button>  
-            <!-- {{ room.$value }}  -->       
+        <button type="button" class="btn btn-default" ng-click="Message.open(room.$value)">  {{ room.$value }} </button>                     
     </p>        
 </div>
     
@@ -38,4 +35,9 @@
     -->
     
 </div>
+    <!-- add a form with text input and a button, button ng-click and ng-submit -->
+    <!-- call a functin in homeCtrl home.addmessage? -->
+    <!-- add input ng-model="home.newMessage" -->
+    <!--  -->
+    <input type="text">
 </html>

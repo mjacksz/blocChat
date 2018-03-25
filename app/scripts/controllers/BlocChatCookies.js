@@ -31,7 +31,7 @@
         //  }
         console.log("BlocChatCookies.js - finish");  
       }
-
+      console.log("BlocChatCookies.js - if currentUser fails ");
   }
   angular
     .module('blocChat')

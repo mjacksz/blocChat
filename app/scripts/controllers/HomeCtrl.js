@@ -25,7 +25,7 @@
             console.log("HomeCtrl " , this.Messages);          
         }
             
-            
+         // this.newMessage ng-model, call Message.send( message )   
     }
 
     angular

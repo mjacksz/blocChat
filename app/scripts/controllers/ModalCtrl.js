@@ -1,8 +1,11 @@
-(function() {    function ModalCtrl(Room, $uibModalInstance, $cookies) {
+(function() {    
+    function ModalCtrl(Room, $uibModalInstance, $cookies) {
         console.log("Inside ModalCtrl.js " + Room );
         //this.Rooms = Room.all;
         this.roomerror = "";     
-       
+  
+  console.log("ModalCtrl.js - above this.ok ");
+        
   this.ok = function() {
     console.log("At the this.ok " + this.searchTerm );
     //
@@ -18,31 +21,32 @@
     // $uibModalInstance.dismiss('cancel');
   };
         
+  console.log("ModalCtrl.js - before this.setUserName ");
+        
   this.setUserName = function()  {
     //
     // check if entry is empty and not spaces
     //  if (!currentUser || currentUser === '') {
     //
-    console.log("ModalCtrl.js - From BlocChatCookies", this.username);
+    console.log("ModalCtrl.js - From BlocChatCookies" + this.username);
     
     
 
     if ( !this.username || this.username === "" || !this.username.trim() )   {
         console.log("ModalCtrl.js - IF / Return")
         return;
-        // $uibModalInstance.close();
     } else { 
         $cookies.put("blocChatCurrentUser", this.username);
         console.log("ModalCtrl.js - this.setUserName");
         $uibModalInstance.close();
-        //console.log("ModalCtrl.js - this.setUserName - IF/ELSE ");
     }
     
       
     //  $uibModalInstance.close(); //  take modal.username - process then close modal ??  
       
-        }         
-    }
+  }   
+  console.log("ModalCtrl.js - leaving function ");
+}
 
         
  
