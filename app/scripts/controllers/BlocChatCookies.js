@@ -3,7 +3,7 @@
       var currentUser = $cookies.get('blocChatCurrentUser');
       // var currentUser = $cookies.get('blocChatCurrentUser');
       console.log("BlocChatCookies.js - Value of currentUser is: " + currentUser);
-      console.log("New Message from usernameCtrl", "currentUser");
+      // console.log("New Message from usernameCtrl", "currentUser");
       console.log("BlocChatCookies.js - value of $cookies is: " + $cookies);
       console.log("BlocChatCookies.js - value of currentUser is: " + currentUser);
       

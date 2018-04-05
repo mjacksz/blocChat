@@ -25,12 +25,26 @@
             console.log("HomeCtrl " , this.Messages);          
         }
             
-         // this.newMessage ng-model, call Message.send( message )   
+         // this.newMessage ng-model, call Message.send( message )
+        
+        this.addMessage = function(newMessage)  {
+            console.log("HomeCtrl.js - Inside this.addMessage - add newMessagew/username to DB - How? ");
+            console.log("How do I call Message.js from here. Add to DB there not here ... then why Message.send ? ");
+            console.log("HomeCtrl - call Message.send with roomID and newMessage ");
+            //var roomID = Message.getByRoomId(this.roomId);  // Get roomID
+            console.log("HomeCtrl - this.addMessage - after this.roomID call to the Messages script ");
+            Message.send(newMessage);
+            console.log("HomeCtrl - this.addMessage - after Message.send with roomID and newMessage ");
+            // use Message service to add to firebase DB
+            // include username, roomID ?, date
+        }
+        
+        
     }
 
     angular
         .module('blocChat')
         //.controller('HomeCtrl', ["Room" ,"$uibModal", HomeCtrl]);
-        .controller('HomeCtrl', ["Room" ,"$uibModal", "Message", HomeCtrl]);
+        .controller('HomeCtrl', ["Room" ,"$uibModal", "Message", HomeCtrl ]);
         //.controller('HomeCtrl', ["Room" ,"$uibModal", "Message"]);
 })();

@@ -28,7 +28,7 @@
     // check if entry is empty and not spaces
     //  if (!currentUser || currentUser === '') {
     //
-    console.log("ModalCtrl.js - From BlocChatCookies" + this.username);
+    console.log("ModalCtrl.js - From BlocChatCookies - username " + this.username);
     
     
 

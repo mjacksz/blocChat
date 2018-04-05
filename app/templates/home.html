@@ -39,5 +39,29 @@
     <!-- call a functin in homeCtrl home.addmessage? -->
     <!-- add input ng-model="home.newMessage" -->
     <!--  -->
-    <input type="text">
+    
+     
+    <div class="search-box">
+        <form ng-submit="ok()">
+            
+            <div class="input-group animated fadeIn">
+
+                <input type="text" class="form-control finderBar" ng-model="home.newMessage" placeholder="Please enter a chat room message" autofocus>
+                <!--  input type="text" class="form-control finderBar" ng-model="modal.searchTerm" placeholder="Please enter a room name" autofocus  -->
+
+                <span class="input-group-btn">
+                    <button class="btn btn-default btn-success" type="button" ng-click="home.addMessage()">Add Message</button>
+                </span>
+
+            </div>
+        </form>
+          <!--  {{ modal.roomerror }}  -->
+       </div>  
+    
+
+    <!--  input type="text"> <!--   class="form-control finderBar" ng-model="">  -->
 </html>
+
+
+
+
