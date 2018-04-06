@@ -2,7 +2,7 @@
   function Message($cookies, $firebaseArray) {
     var Message = {};
     var ref = firebase.database().ref().child("messages").orderByChild("roomId");
-    // var messages = $firebaseArray(ref);
+    var messages = $firebaseArray(ref);
 
     Message.getByRoomId = function(roomId) {
         // Filter the messages by their room ID.
@@ -23,14 +23,15 @@
     // 
     Message.send = function(newMessage )  {
         //  Send method logic
-        console.log("Message - Just passed from HomeCtrl with two parms ... ");
+        console.log(newMessage);
         console.log("Message.js - Message.send !! Add to DB !! How ?  ");
         // $firebaseArray(ref.equalTo(roomId)),
         // $firebaseArray(ref.equalTo(roomId)), $firebaseArray.equalTo(newMessage)
             // this.roomID = this.getByRoomID(roomID)
         //console.log("Message.js - Message.send - this.roomID (HomeCtrl) is: " + this.roomID);
         console.log("Message.js - Message.send - Message.send ADD newMessage to DB " + newMessage);
-        $firebaseArray.$add(newMessage);
+        messages.$add(newMessage);
+        // $firebaseArray(ref.equalTo(newMessage));  // Does this put the entry in the DB ?
         return 
         // ( $firebaseArray(ref.equalTo(roomId)), $firebaseArray.equalTo(newMessage) ) ) ;
         
