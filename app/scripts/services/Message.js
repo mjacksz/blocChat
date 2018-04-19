@@ -6,7 +6,7 @@
 
     Message.getByRoomId = function(roomId) {
         // Filter the messages by their room ID.
-         console.log("/nInside Messages.js - Message.getByRoomID/n", roomId);
+         console.log("Inside Messages.js - Message.getByRoomID", $firebaseArray(ref.equalTo(roomId)));
          //return 
         //console.log("Message.js" , $firebaseArray(ref.orderByChild("roomId").equalTo(roomId))) ;
         return $firebaseArray(ref.equalTo(roomId)) ;
@@ -30,7 +30,9 @@
             // this.roomID = this.getByRoomID(roomID)
         //console.log("Message.js - Message.send - this.roomID (HomeCtrl) is: " + this.roomID);
         console.log("Message.js - Message.send - Message.send ADD newMessage to DB " + newMessage);
-        messages.$add(newMessage);
+        
+        messages.$add(newMessage).then(function(){ console.log("Messages.js - ", messages )});
+        
         // $firebaseArray(ref.equalTo(newMessage));  // Does this put the entry in the DB ?
         return 
         // ( $firebaseArray(ref.equalTo(roomId)), $firebaseArray.equalTo(newMessage) ) ) ;
