@@ -16,27 +16,20 @@
     
 <div ng-repeat="message in home.Messages" >
     
-    <!--  ng-click="Message.open( {{ room.$value }} )"> {{ room.$value } -->
-    
+    <p></p>
     <p>Posted by: {{ message.username}}</p>
     <p>When: {{ message.sentAt}}</p>
     <p>Message: {{ message.content }}</p>
-    <p>newMessage: {{ message.newMessage }} </p>
+    <p></p>
     
 </div>
-    <!-- add a form with text input and a button, button ng-click and ng-submit -->
-    <!-- call a functin in homeCtrl home.addmessage? -->
-    <!-- add input ng-model="home.newMessage" -->
-    <!--  -->
     
-     
     <div class="search-box">
         <form ng-submit="ok()">
             
             <div class="input-group animated fadeIn">
 
                 <input type="text" class="form-control finderBar" ng-model="home.newMessage" placeholder="Please enter a chat room message" autofocus>
-                <!--  input type="text" class="form-control finderBar" ng-model="modal.searchTerm" placeholder="Please enter a room name" autofocus  -->
 
                 <span class="input-group-btn">
                     <button class="btn btn-default btn-success" type="button" ng-click="home.addMessage()">Add Message</button>

@@ -8,7 +8,7 @@
       console.log("BlocChatCookies.js - value of currentUser is: " + currentUser);
       
       if (!currentUser || currentUser === '' ) {   // Test #1
-        console.log("BlocChatCookies.js - Inside DO loop/n");
+        console.log("BlocChatCookies.js - currentUser ");
         
    
         $uibModal.open({
@@ -20,15 +20,6 @@
             controllerAs: "modal"           
             });             
       
-        //  Add check uibModal 
-          
-        //  $uibModalInstance.close();
-        //   then check inputed field what is the field name ??
-        //  if ( !username.setUserName  || username.setUserName === '' || !username.setUserName.trim() )  {
-        //      Do nothing - continue to add to cookie field - input is something 
-        //     } else  { 
-        //      return
-        //  }
         console.log("BlocChatCookies.js - finish");  
       }
       console.log("BlocChatCookies.js - if currentUser fails ");
