@@ -8,7 +8,21 @@
         this.Rooms = Room.all;
         this.activeRoomID = null;
         //this.activeRoomId = null;
-            
+        var t = firebase.database.ServerValue.TIMESTAMP
+        
+        // Set unix time to 23 hr clock       
+    
+        convertedTime = function(t) {  
+                    console.log("HomeCtrl - convertedTime" + t);
+                    var dt = new Date(t*1000);
+                    var hr = dt.getHours();
+                    var m = "0" + dt.getMinutes();
+                    var s = "0" + dt.getSeconds();
+                    // return Number(hr+ ':' + m.substr(-2) + ':' + s.substr(-2));
+                    return hr+ ':' + m.substr(-2) + ':' + s.substr(-2);
+        }
+        
+        
         this.open = function() {
           console.log("HomeCtrl.js - Inside this.open function");
           $uibModal.open({
@@ -28,25 +42,23 @@
         }
             
         
+        
+    
+        
         this.addMessage = function()  {
             console.log("HomeCtrl.js - Inside this.addMessage - add newMessagew/username to DB - How? ");
-            console.log("How do I call Message.js from here. Add to DB there not here ... then why Message.send ? ");
-            console.log("HomeCtrl - call Message.send with roomID and newMessage ");
-            console.log("HomeCtrl - this.addMessage - after this.roomID call to the Messages script ");
             
             var currentUser = $cookies.get('blocChatCurrentUser');
+            console.log("HomeCtrl - username is: " + currentUser);
             
             firebase.database().ref().child("messages").orderByChild("roomID");
             //firebase.database().ref().child("messages").orderByChild("roomId");
-            
-            console.log("*** HomeCtrl - Check values ROOMID, username ***");  
-            console.log("HomeCtrl - username is: " + currentUser);
-            console.log("HomeCtrl - After value check ...");
-            
+           
+            // sentAt: firebase.database.ServerValue.TIMESTAMP,
             
             var msg = {
                 content: this.newMessage,
-                sentAt: firebase.database.ServerValue.TIMESTAMP,               
+                sentAt: convertedTime(firebase.database.ServerValue.TIMESTAMP),               
                 roomID: this.activeRoomId,               
                 username: currentUser               
             };
