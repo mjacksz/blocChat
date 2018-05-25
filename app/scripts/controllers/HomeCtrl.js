@@ -58,7 +58,7 @@
             
             var msg = {
                 content: this.newMessage,
-                sentAt: convertedTime(firebase.database.ServerValue.TIMESTAMP),               
+                sentAt: firebase.database.ServerValue.TIMESTAMP,
                 roomID: this.activeRoomId,               
                 username: currentUser               
             };
